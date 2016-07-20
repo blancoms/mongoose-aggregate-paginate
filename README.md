@@ -87,6 +87,7 @@ mongoose-aggregate-paginate-allowdiskuse is based on [mongoose-aggregate-paginat
 
 [mongoose]: http://mongoosejs.com
 [mongoose-paginate]: https://www.npmjs.com/package/mongoose-paginate
+[mongoose-aggregate-paginate]: https://www.npmjs.com/package/mongoose-aggregate-paginate
 [license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
 [license-url]: LICENSE
 [travis-ci-img]: https://travis-ci.org/Maheshkumar-Kakade/mongoose-aggregate-paginate.svg?branch=master
