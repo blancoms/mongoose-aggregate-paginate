@@ -196,5 +196,16 @@ describe('Monggose Aggregate Paginate tests', function () {
         })
       })
     })
+    describe('with allowDiskUse', function () {
+      it('should return 10 results, pagecount = 10 and total count = 100', function (done) {
+        TestModel.aggregatePaginate(query, { allowDiskUse: true }, function (err, result, pageCount, totalCount) {
+          if (err) return done(err)
+          result.length.should.equal(10)
+          pageCount.should.equal(10)
+          totalCount.should.equal(100)
+          done()
+        })
+      })
+    })
   })
 })

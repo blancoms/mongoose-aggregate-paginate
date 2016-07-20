@@ -1,6 +1,6 @@
-# mongoose-aggregate-paginate
+# mongoose-aggregate-paginate-allowdiskuse
 
-> `mongoose-aggregate-paginate` is a [Mongoose][mongoose] plugin easy to add pegination for aggregates.  This plugin is to be used in combination with view pagination middleware such as [express-paginate](https://github.com/niftylettuce/express-paginate).   
+> `mongoose-aggregate-paginate-allowdiskuse` is a [Mongoose][mongoose] plugin easy to add pegination for aggregates. It includes the option `allowDiskUse` for bigger queries. This plugin is to be used in combination with view pagination middleware such as [express-paginate](https://github.com/niftylettuce/express-paginate).   
 
 [![Build Status][travis-ci-img]][travis-ci-url] 
 [![npm version][npm-version-img]][npm-version-url] 
@@ -9,7 +9,7 @@
 [![js-standard-style][js-standard-style-img]][js-standard-style-url] 
 
 
-[![NPM](https://nodei.co/npm/mongoose-aggregate-paginate.png?downloadRank=true&downloads=true)](https://nodei.co/npm/mongoose-aggregate-paginate/)
+[![NPM](https://nodei.co/npm/mongoose-aggregate-paginate-allowdiskuse.png?downloadRank=true&downloads=true)](https://nodei.co/npm/mongoose-aggregate-paginate-allowdiskuse/)
 ## Index
 * [Install](#install)
 * [Usage](#usage)
@@ -18,7 +18,7 @@
 ## Install
 
 ```bash
-npm install mongoose-aggregate-paginate --save
+npm install mongoose-aggregate-paginate-allowdiskuse --save
 ```
 ## Usage
 
@@ -26,7 +26,7 @@ This plugin must first be added to a schema:
 
 ```js
 
-var mongooseAggregatePaginate = require('mongoose-aggregate-paginate');
+var mongooseAggregatePaginate = require('mongoose-aggregate-paginate-allowdiskuse');
 
 mySchema.plugin(mongooseAggregatePaginate);
 
@@ -43,6 +43,7 @@ mySchema.plugin(mongooseAggregatePaginate);
   - `page` - Default: `1`
   - `limit` - Default: `10`
   - `sortBy` - Default: `undefined`
+  - `allowDiskUse` - Default: `false`
 * `callback(err, results, pageCount, itemCount)` - A callback is called once pagination results are retrieved, or an error has occurred.
 
 **Examples**
@@ -59,7 +60,7 @@ var MyModel = mongoose.model('MyModel',{
 var aggregate = MyModel.aggregate();
 aggregate.match({age : {'lt' : 18 } })
 .group({ _id: '$city' , count : { '$sum' : 1 } })
-var options = { page : 1, limit : 15}
+var options = { page : 1, limit : 15, allowDiskUse: true }
 
 MyModel.aggregatePaginate(aggregate, options, function(err, results, pageCount, count) {
   if(err) 
@@ -79,7 +80,7 @@ MyModel.aggregatePaginate(aggregate, options, function(err, results, pageCount, 
 npm test
 ```
 ## Acknowlegements
-mongoose-aggregate-paginate was inspired by [mongoose-paginate][mongoose-paginate].
+mongoose-aggregate-paginate-allowdiskuse is based on [mongoose-aggregate-paginate][mongoose-aggregate-paginate].
 
 ## License
 [MIT][license-url]

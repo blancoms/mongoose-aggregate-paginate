@@ -1,5 +1,5 @@
 {
-  "name": "mongoose-aggregate-paginate",
+  "name": "mongoose-aggregate-paginate-allowdiskuse",
   "version": "1.0.4",
   "description": "Mongoose plugin to add pegination for aggregations",
   "main": "index.js",
@@ -9,17 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Maheshkumar-Kakade/mongoose-aggregate-paginate.git"
+    "url": "https://github.com/blancoms/mongoose-aggregate-paginate-allowdiskuse.git"
   },
   "bugs": {
-    "email": "maheshkumarkakade@gmail.com",
-    "url": "https://github.com/Maheshkumar-Kakade/mongoose-aggregate-paginate/issues"
+    "email": "blanco.ms@gmail.com",
+    "url": "https://github.com/blancoms/mongoose-aggregate-paginate-allowdiskuse/issues"
   },
-  "homepage": "https://github.com/Maheshkumar-Kakade/mongoose-aggregate-paginate",
+  "homepage": "https://github.com/blancoms/mongoose-aggregate-paginate-allowdiskuse",
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/Maheshkumar-Kakade/mongoose-aggregate-paginate/LICENSE"
+      "url": "https://github.com/blancoms/mongoose-aggregate-paginate-allowdiskuse/LICENSE"
     }
   ],
   "keywords": [
@@ -28,7 +28,7 @@
     "aggregate",
     "pagination"
   ],
-  "author": "Maheshkumar Kakade <maheshkumarkakade@gmail.com>",
+  "author": "Matias Blanco <blanco.ms@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "async": "^2.0.0-rc.1"
